@@ -22,16 +22,20 @@
         if(resposta == 1) {
 
         for(let maxVendas = 1; maxVendas <= 10; maxVendas++) {
-        
-        numProd = prompt("Digite o Código do Produto")
+        while (resposta == 1) {
+           numProd = prompt("Digite o Código do Produto")
         item = prompt("Digite o nome do Produto")
         valor = prompt("Digite o Valor do produto")
         document.getElementById("venProd").innerHTML += "Número " + numProd + "</br>" + "---------------------------------------------------------" + "</br>" + "Produto: " + item + "</br>" + "---------------------------------------------------------" + "</br>" + "Valor: " + valor + "</br>" + "</br>" + "</br>"
         resposta = Number(prompt("Digite 1 se quiser continuar, ou 2 para parar \n Vendas Feitas: " + maxVendas + "/10"))
-        
         }
-        
-       }
+        }
+    }else if(resposta == 2){
+        document.getElementById("venProd").innerHTML = "Obrigado por usar nossa loja!"
+    }else{
+        document.getElementById("venProd").innerHTML = "Favor inserir um Número válido"
+    }
+       
 
 
     </script>
