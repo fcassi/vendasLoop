@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício loop</title>
+</head>
+<body>
+
+    <h1>Vendas Legais</h1>
+    <h2>Seus produtos:</h2>
+    <div id = "venProd"></div>
+    <script>
+        //----------------------Variáveis------------------------
+        let numProd;
+        let valor; 
+        let item;
+        let resposta = Number(prompt("Bem vindo para nossa loja! Deseja Vender algo? \n 1 - Sim \n 2 - Não"))
+        //-------------------------------------------------------
+
+        if(resposta == 1) {
+
+        for(let maxVendas = 1; maxVendas <= 10; maxVendas++) {
+        
+        numProd = prompt("Digite o Código do Produto")
+        item = prompt("Digite o nome do Produto")
+        valor = prompt("Digite o Valor do produto")
+        document.getElementById("venProd").innerHTML += "Número " + numProd + "</br>" + "---------------------------------------------------------" + "</br>" + "Produto: " + item + "</br>" + "---------------------------------------------------------" + "</br>" + "Valor: " + valor + "</br>" + "</br>" + "</br>"
+        resposta = Number(prompt("Digite 1 se quiser continuar, ou 2 para parar \n Vendas Feitas: " + maxVendas + "/10"))
+        
+        }
+        
+       }
+
+
+    </script>
+    
+</body>
+</html>
